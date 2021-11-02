@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.botones{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+}
+
+.formBuscar{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
