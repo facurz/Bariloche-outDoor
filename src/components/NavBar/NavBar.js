@@ -1,5 +1,6 @@
 import {Navbar, Container, Nav, NavDropdown, Form, FormControl, Button} from 'react-bootstrap';
 import { CartWidget } from '../CartWidget/CartWidget';
+import logo from '../../images/logo.png'
 import './NavBar.scss'
 
 export const NavBar = () => {
@@ -7,14 +8,14 @@ export const NavBar = () => {
         <header>
             <Navbar bg="dark" className="navBar__text" variant="dark" expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home"><img loading="lazy" width="80" height="80" src="http://www.barilocheoutdoor.com/wp-content/uploads/2018/02/cropped-logo-outdoor-e1519657783489.png" alt="Logo Bariloche Outdoor"/> Bariloche Outdoor</Navbar.Brand>
+                    <Navbar.Brand href="#home"><img loading="lazy" width="100" height="100" src={logo} alt="Logo Bariloche Outdoor"/></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto ms-auto me-auto">
+                        <Nav className="mx-auto ">
                             <Nav.Link  className="pe-5" href="#home">Inicio</Nav.Link>
                             <NavDropdown className="pe-5" title="Categorías" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Camping</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Montaña</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.1">Carpas y bolsas de dormir</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">Camping</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Bicis</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Ski</NavDropdown.Item>
                             </NavDropdown>

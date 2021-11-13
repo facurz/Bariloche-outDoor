@@ -20,9 +20,9 @@ export const ItemCount = ({stock}) => {
             <span className="spanCounter">{counter}</span>
             <Button className="buttonsCounter py-0" onClick={add} variant="outline-dark">+</Button>
         </ButtonGroup>
-        <div>
+        
         <Button className="buttonsCounter mt-1 py-0" onClick={btnComprar} variant="dark">Agregar al Carrito</Button>
-        </div>
+        
         
         </div>
         

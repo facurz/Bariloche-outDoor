@@ -1,0 +1,28 @@
+.card{
+    margin: 10px;
+    background: linear-gradient(to top, #FFFFFF, #D6D6D6); 
+    border: 1px solid grey;
+}
+
+.card-body{
+    border-top: 1px solid grey;
+    background-color: white;
+    
+    
+}
+
+.card-img{
+    height: 250px;
+    object-fit: contain;
+}
+
+.card-title{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.card-text{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 18px;
+}
