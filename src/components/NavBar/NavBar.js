@@ -6,8 +6,9 @@ import './NavBar.scss'
 export const NavBar = () => {
     return(
         <header>
+            
             <Navbar bg="dark" className="navBar__text" variant="dark" expand="lg">
-                <Container>
+                <Container className="prueba">
                     <Navbar.Brand href="#home"><img loading="lazy" width="100" height="100" src={logo} alt="Logo Bariloche Outdoor"/></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">

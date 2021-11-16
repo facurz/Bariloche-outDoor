@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Container } from 'react-bootstrap'
 import { pedirDatos } from '../../helpers/pedirDatos'
+import { Carrusel } from '../Carrusel/Carrusel'
 import { ItemList } from '../ItemList/ItemList'
 
 export const ItemListContainer = () => {
@@ -25,12 +26,12 @@ export const ItemListContainer = () => {
     }, [])
 
     return (
-        <Container>
-            
+        <Container fluid className="mx-0 px-0">
+            <Carrusel/>
             {
                 loading 
                     ? <h2>Cargando...</h2> 
-                    : <ItemList items={productos}/>
+                    :  <ItemList items={productos}/>
             }
         </Container>
     )
