@@ -1,14 +1,21 @@
 .spanCounter{
     width: 40px;
-    height: 30px;
+    height: 40px;
     text-align: center;
-    padding-top: 2px;
+    padding-top: 5px;
     font-size: 15px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     
 }
 
-.buttonsCounter{
-    height: 30px;
+.button_Counter{
+    
+    height: 40px;
+}
+
+.button_Agregar{
+    
+    margin-left: 10px;
+    height: 40px;
 }

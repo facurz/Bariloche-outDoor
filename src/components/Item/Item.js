@@ -1,20 +1,20 @@
 import React from 'react'
-import { Card } from 'react-bootstrap'
-import { ItemCount } from '../ItemCount/ItemCount'
+import { Link } from 'react-router-dom'
+import { Card, Button } from 'react-bootstrap'
 import './Item.scss'
 
 export const Item = ({id, name, img, desc, price, stock}) => {
 
 
     return(
-        <Card className="px-0" style={{ width: '18rem' }}>
+        <Card key={id} className="px-0" style={{ width: '18rem' }}>
         <Card.Img src={img} />
         <Card.Body>
         <Card.Title>ARS $ {price}</Card.Title>
         <Card.Text>
             {name}
         </Card.Text>
-        <ItemCount stock={stock}/>
+        <Link to={`/detail/${id}`}><Button variant="dark">Ver más</Button></Link>
         </Card.Body>
         </Card>
     )
