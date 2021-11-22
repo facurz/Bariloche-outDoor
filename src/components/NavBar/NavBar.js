@@ -15,12 +15,12 @@ export const NavBar = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mx-auto ">
-                            <Nav.Link  className="pe-5" href="#home">Inicio</Nav.Link>
-                            <NavDropdown className="pe-5" title="Categorías" id="basic-nav-dropdown">
-                            <NavDropdown.Item><Link className="linkRoute" to="/productos/carpas">Carpas y bolsas de dormir</Link></NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Camping</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Bicis</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Ski</NavDropdown.Item>
+                            <Nav.Link className="pe-5"><Link className="linkMenu" to="/">Inicio</Link></Nav.Link>
+                            <NavDropdown className="pe-5 linkMenu" title="Categorías" id="basic-nav-dropdown">
+                            <NavDropdown.Item><Link className="linkSubmenu" to="/productos/Carpas">Carpas</Link></NavDropdown.Item>
+                            <NavDropdown.Item><Link className="linkSubmenu" to="/productos/Bolsas">Bolsas de dormir</Link></NavDropdown.Item>
+                            <NavDropdown.Item><Link className="linkSubmenu" to="/productos/Bicicletas">Bicis</Link></NavDropdown.Item>
+                            <NavDropdown.Item><Link className="linkSubmenu" to="/productos/Kayaks">Kayaks</Link></NavDropdown.Item>
                             </NavDropdown>
                             <CartWidget/>
                         </Nav>

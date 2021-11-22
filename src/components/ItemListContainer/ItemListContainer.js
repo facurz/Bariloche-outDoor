@@ -3,6 +3,7 @@ import { useParams } from 'react-router'
 import { Container } from 'react-bootstrap'
 import { pedirDatos } from '../../helpers/pedirDatos'
 import {ItemList} from '../ItemList/ItemList'
+import './ItemListContainer.scss'
 
 
 export const ItemListContainer = () => {
@@ -34,11 +35,11 @@ export const ItemListContainer = () => {
     }, [catId])
 
     return (
-        <Container fluid className="mx-0 px-0">
+        <Container className="my-5">
             {
                 loading 
                     ? <h2>Cargando...</h2> 
-                    :  <ItemList items={productos}/>
+                    : <><h2 className="listContainer_title">PRODUCTOS: {catId}</h2><hr/><ItemList items={productos}/></>
             }
         </Container>
     )

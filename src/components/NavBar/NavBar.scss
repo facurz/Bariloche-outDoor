@@ -2,8 +2,17 @@
     font-family: 'Oxygen', sans-serif;
     font-size: 18px;
 }    
-.linkRoute {
+.linkSubmenu {
     text-decoration: none;
     color:black;
 }
 
+.linkMenu {
+    text-decoration: none;
+    color:#9b9d9e;
+}
+
+.linkMenu:hover {
+    text-decoration: none;
+    color:white;
+}
