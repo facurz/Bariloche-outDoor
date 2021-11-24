@@ -1,5 +1,6 @@
-import React from 'react'
-import { useNavigate } from 'react-router'
+import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
+import { useNavigate} from 'react-router'
 import {ItemCount} from '../ItemCount/ItemCount'
 import { Col, Container, Row} from 'react-bootstrap'
 import './ItemDetail.scss'
@@ -7,6 +8,9 @@ import './ItemDetail.scss'
 export const ItemDetail = ({id, name, img, desc, price, categ, stock}) => {
 
     const navigate = useNavigate()
+    const [cantidad, setCantidad] = useState(1)
+    const [agregado, setAgregado] = useState(false)
+    
 
     const handleVolver = () => {
         navigate(-1)
@@ -14,6 +18,18 @@ export const ItemDetail = ({id, name, img, desc, price, categ, stock}) => {
 
     const handleVolverInicio = () => {
         navigate('/')
+    }
+
+    const handleAgregar = () => {
+        if (cantidad > 0) {
+            console.log('Item agregado:', {
+                id,
+                name,
+                price,
+                cantidad
+            })
+            setAgregado(true)
+        }   
     }
 
     return (
@@ -28,9 +44,18 @@ export const ItemDetail = ({id, name, img, desc, price, categ, stock}) => {
                     <p className="detail_text">{desc}</p>
                     <h4 className="detail_title--price">ARS $ {price}</h4>
                     <p className="detail_text mb-3"><small className="text-muted">Cantidad disponible: {stock}</small></p>
-                
-                    <ItemCount stock={stock}/>
-                
+
+                    {
+                    !agregado 
+                    ?   <ItemCount 
+                            stock={stock} 
+                            cantidad={cantidad} 
+                            setCantidad={setCantidad}
+                            onAdd={handleAgregar}
+                        />
+                    :   <Link to="/cart" className="btn btn-success d-block">Terminar mi compra</Link>
+                    }
+
                     <div className="my-4">
                     <button className="btn btn-dark" onClick={handleVolver}>Volver</button>
                     <button className="btn btn-outline-dark ms-2" onClick={handleVolverInicio}>Volver al inicio</button>
