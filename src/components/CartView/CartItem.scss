@@ -1,0 +1,21 @@
+
+.cartView_detalle{
+    font-family: 'Oxygen', sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.eliminar_producto{
+    font-size: 13px;
+    padding: 3;
+    color:orangered;
+    background-color: transparent;
+}
+.eliminar_producto:hover{
+    font-size: 15px;
+    padding: 3;
+    color:red;
+    background-color: transparent;
+}
