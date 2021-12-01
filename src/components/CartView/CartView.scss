@@ -1,6 +1,7 @@
 .cart_title{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .cart_title--font{
     display: inline-block;
@@ -34,9 +35,8 @@
 }
 
 .cartView_subtitulo{
-    font-family: 'Oxygen', sans-serif;
     display: flex;
     justify-content: center;
     text-align: center;
-    
+    font-family: 'Oxygen', sans-serif;
 }

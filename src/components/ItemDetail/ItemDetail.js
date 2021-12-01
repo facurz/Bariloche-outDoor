@@ -36,7 +36,7 @@ export const ItemDetail = ({id, name, img, desc, price, categ, stock}) => {
     return (
         <Container>
             <Row >
-                <Col>
+                <Col md="6">
                     <img src={img} className="detail_img" alt={name}/>
                 </Col>
                 <Col>

@@ -22,17 +22,17 @@ export const NavBar = () => {
                             <NavDropdown.Item><Link className="linkSubmenu" to="/productos/Bicicletas">Bicis</Link></NavDropdown.Item>
                             <NavDropdown.Item><Link className="linkSubmenu" to="/productos/Kayaks">Kayaks</Link></NavDropdown.Item>
                             </NavDropdown>
-                            <Link to="/cart"><CartWidget/></Link>
+                            <Form className="d-flex">
+                                <FormControl
+                                type="search"
+                                placeholder="Search"
+                                className="me-2"
+                                aria-label="Buscar"
+                                />
+                                <Button variant="outline-light">Buscar</Button>
+                            </Form>
                         </Nav>
-                        <Form className="d-flex">
-                            <FormControl
-                            type="search"
-                            placeholder="Search"
-                            className="me-2"
-                            aria-label="Buscar"
-                            />
-                            <Button variant="outline-light">Buscar</Button>
-                        </Form>
+                        <CartWidget/>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

@@ -1,3 +1,8 @@
+.hidden{
+    visibility: hidden;
+    pointer-events: none;
+}
+
 .cartWidget{
     display: flex;
     align-items: center;

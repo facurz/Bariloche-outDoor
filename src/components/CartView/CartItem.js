@@ -20,10 +20,7 @@ export const CartItem = ({name, price, cantidad, id}) => {
                 <p>{cantidad}</p>
                 </Col>
                 <Col>
-                <p>{price}</p>
-                </Col>
-                <Col>
-                <p>{price * cantidad}</p>
+                <p>{`$${price * cantidad}`}</p>
                 </Col>
                 <Col>
                 <button 
