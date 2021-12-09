@@ -1,4 +1,5 @@
 import React, { useContext} from 'react'
+import { Link } from 'react-router-dom'
 import { useNavigate} from 'react-router'
 import { CartContext } from '../../Context/CartContext'
 import { CartItem } from './CartItem'
@@ -65,7 +66,7 @@ export const CartView = () => {
                                 <h5>TOTAL: $ {totalCompra()}</h5>
                             </div>
                             <div className="d-flex justify-content-end">
-                                <button className="btn btn-dark">Terminar mi compra</button>
+                                <Link to="/checkout" className="btn btn-dark">Terminar mi compra</Link>
                             </div>
                         
                     </>
