@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Card, Button } from 'react-bootstrap'
 import './Item.scss'
 
-export const Item = ({id, name, img, desc, price, stock}) => {
+export const Item = ({id, name, img, price}) => {
 
 
     return(

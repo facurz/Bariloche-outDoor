@@ -1,11 +1,12 @@
 import { ButtonGroup, Button } from 'react-bootstrap'
+import Swal from 'sweetalert2'
 import './ItemCount.scss'
 
 export const ItemCount = ({stock, cantidad, setCantidad, onAdd}) => {
 
     
     
-    const handleAdd = () =>(cantidad < stock ) ? setCantidad(cantidad + 1) : alert(`No hay más stock`);
+    const handleAdd = () =>(cantidad < stock ) ? setCantidad(cantidad + 1) : Swal.fire('La cantidad debe ser menor al stock disponible');
     
     const handleSubtract = () => cantidad >0 && setCantidad(cantidad - 1)
 
