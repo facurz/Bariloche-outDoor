@@ -86,7 +86,7 @@ export const Checkout = () => {
                 ? <Navigate to="/"/>
                 :
                     <div className="container my-5">
-                        <h2>Resumen de compra</h2>
+                        <h2>Terminar compra</h2>
                         <hr/>
 
                         <form onSubmit={handleSubmit}>
@@ -129,6 +129,8 @@ export const Checkout = () => {
                                 placeholder="Repita email"
                             />
                             {values.emailConfirm !== values.email && <small>Email no coincide</small>}
+
+                            <hr/>
 
                             <button type="submit" className="btn btn-dark">Enviar</button>
                         </form>

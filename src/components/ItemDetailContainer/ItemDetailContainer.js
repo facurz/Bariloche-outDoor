@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router'
 import { Container} from 'react-bootstrap'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
+import { Loader } from '../Loader/Loader'
 import {doc, getDoc, collection} from 'firebase/firestore/lite'
 import {db} from '../../firebase/config'
 
@@ -39,7 +40,7 @@ export const ItemDetailContainer = () => {
            
                 {
                 loading
-                    ? <h2>Cargando...</h2>
+                    ? <Loader/>
                     : <ItemDetail {...item}/>
                 }
             

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import { Container } from 'react-bootstrap'
 import {ItemList} from '../ItemList/ItemList'
+import { Loader } from '../Loader/Loader'
 import {collection, getDocs, query, where} from 'firebase/firestore/lite'
 import {db} from '../../firebase/config'
 import './ItemListContainer.scss'
@@ -42,7 +43,7 @@ export const ItemListContainer = () => {
         <Container className="my-5">
             {
                 loading 
-                    ? <h2>Cargando...</h2> 
+                    ? <Loader/>
                     : <><h2 className="listContainer_title">PRODUCTOS: {catId}</h2><hr/><ItemList items={productos}/></>
             }
         </Container>
