@@ -1,4 +1,4 @@
-## CURSO REACT JS: Proyecto Ecommerce
+## CURSO REACT JS- Coderhouse: Proyecto final
 
 https://bariloche-outdoor.netlify.app/
 
